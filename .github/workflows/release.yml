@@ -13,12 +13,6 @@ jobs:
         with:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-      - name: GPG user IDs
-        run: |
-          echo "fingerprint: ${{ steps.import_gpg.outputs.fingerprint }}"
-          echo "keyid:       ${{ steps.import_gpg.outputs.keyid }}"
-          echo "name:        ${{ steps.import_gpg.outputs.name }}"
-          echo "email:       ${{ steps.import_gpg.outputs.email }}"
       - name: Set up Java for publishing to Maven Central Repository
         uses: actions/setup-java@v1
         with:
@@ -28,9 +22,7 @@ jobs:
           server-password: MAVEN_PASSWORD
           gpg-passphrase: ${{ secrets.PASSPHRASE }}
       - name: Test JDBC Driver
-        run: |
-          chmod a+x .github/workflows/test_jdbc_driver.sh
-          .github/workflows/test_jdbc_driver.sh
+        run: .github/workflows/test_jdbc_driver.sh
       - name: Publish to the Maven Central Repository
         run: |
           echo "mlem mlem"
