@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Turn off firewall
-ufw disable
+sudo ufw disable
 
 # Export PATH and run JDBC sample
 export CLASSPATH=${CLASSPATH}:target/
