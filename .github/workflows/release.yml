@@ -29,7 +29,7 @@ jobs:
           gpg-passphrase: ${{ secrets.PASSPHRASE }}
       - name: Test JDBC Driver
         run: |
-          mvn package
+          ant
           .github/workflows/run_griddb_server.sh
           .github/workflows/run_jdbc.sh
       - name: Publish to the Maven Central Repository
@@ -44,7 +44,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: target/*.jar
+          file: bin/gridstore-jdbc.jar
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
