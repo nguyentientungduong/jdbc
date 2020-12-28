@@ -28,14 +28,11 @@ jobs:
           server-password: MAVEN_PASSWORD
           gpg-passphrase: ${{ secrets.PASSPHRASE }}
       - name: Test JDBC Driver
-        run: |
-          mvn package
-          .github/workflows/run_griddb_server.sh
-          .github/workflows/run_jdbc.sh
+        run: .github/workflows/test_jdbc_driver.sh
       - name: Publish to the Maven Central Repository
         run: |
-          echo "mlem clem"
-          #mvn clean --batch-mode deploy
+          echo "mlem mlem"
+          mvn clean --batch-mode deploy
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
