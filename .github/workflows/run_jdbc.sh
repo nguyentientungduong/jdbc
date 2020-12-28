@@ -1,5 +1,6 @@
 #!/bin/bash
 
+docker pull griddb/griddb
 export CLASSPATH=${CLASSPATH}:target/
 cp sample/en/jdbc/JDBCSelect.java .
 javac JDBCSelect.java
