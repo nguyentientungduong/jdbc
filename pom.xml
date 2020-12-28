@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.nguyentientungduong</groupId>
 	<artifactId>gridstore-jdbc</artifactId>
-	<version>4.5.0</version>
+	<version>4.5.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>com.github.nguyentientungduong:jdbc</name>
 	<description>JDBC Driver for GridDB V4.5 CE</description>
