@@ -2,11 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.nguyentientungduong</groupId>
-	<artifactId>sample</artifactId>
-	<version>1.0.0</version>
+	<artifactId>gridstore-jdbc</artifactId>
+	<version>4.5.0</version>
 	<packaging>jar</packaging>
 	<name>com.github.nguyentientungduong:jdbc</name>
-	<description>JDBC Driver</description>
+	<description>JDBC Driver for GridDB V4.5 CE</description>
 	<url>https://github.com/nguyentientungduong/jdbc</url>
 
     <scm>
@@ -24,8 +24,8 @@
 
     <developers>
         <developer>
-            <name>Nguyen Tien Tung Duong</name>
-            <email>nguyentientungduong@gmail.com</email>
+            <name>Katsuhiko Nonomura</name>
+            <email>ontact@griddb.org</email>
             <url/>
             <organization>Toshiba Digital Solutions Corporation</organization>
             <organizationUrl/>
