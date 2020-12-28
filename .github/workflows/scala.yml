@@ -32,9 +32,6 @@ jobs:
           mvn package
           .github/workflows/run_griddb_server.sh
           .github/workflows/run_jdbc.sh
-          docker ps
-          ifconfig
-          docker exec griddb_sample sh -c "gs_stat -u admin/admin"
       - name: Publish to the Maven Central Repository
         run: |
           echo "mlem mlem"
