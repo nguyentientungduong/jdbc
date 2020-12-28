@@ -34,7 +34,7 @@ jobs:
           .github/workflows/run_jdbc.sh
           docker ps
           ifconfig
-          docker exec -it griddb_sample -c "gs_stat -u admin/admin"
+          docker exec griddb_sample sh -c "gs_stat -u admin/admin"
       - name: Publish to the Maven Central Repository
         run: |
           echo "mlem mlem"
