@@ -11,25 +11,26 @@
 
     <scm>
         <connection>scm:git:https://github.com/nguyentientungduong/jdbc.git</connection>
-        <tag>v1.0.0</tag>
         <url>https://github.com/nguyentientungduong/jdbc</url>
+        <tag>HEAD</tag>
     </scm>
 
     <licenses>
-    	<license>
-    		<name>The Apache License, Version 2.0</name>
-    		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    	</license>
-	</licenses>
-	<developers>
-		<developer>
-			<name>Nguyen Tien Tung Duong</name>
-			<email>nguyentientungduong@gmail.com</email>
-			<url />
-			<organization>Toshiba Digital Solutions Corporation</organization>
-			<organizationUrl />
-		</developer>
-	</developers>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Nguyen Tien Tung Duong</name>
+            <email>nguyentientungduong@gmail.com</email>
+            <url />
+            <organization>Toshiba Digital Solutions Corporation</organization>
+            <organizationUrl />
+        </developer>
+    </developers
 	
     <dependencies>
         <dependency>
@@ -73,6 +74,16 @@
                     <execution>
                         <id>sign-artifacts</id>
                         <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <updateReleaseInfo>true</updateReleaseInfo>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -87,10 +98,17 @@
                     <execution>
                       <id>attach-javadocs</id>
                       <goals>
-                        <goal>jar</goal>
+                          <goal>jar</goal>
                       </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <inherited>true</inherited>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <updateReleaseInfo>true</updateReleaseInfo>
+                </configuration>
             </plugin>
         </plugins>
     </build>
