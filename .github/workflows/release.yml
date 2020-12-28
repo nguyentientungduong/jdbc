@@ -34,8 +34,8 @@ jobs:
           .github/workflows/run_jdbc.sh
       - name: Publish to the Maven Central Repository
         run: |
-          echo "mlem mlem"
-          #export GPG_TTY=$(tty); mvn clean --batch-mode deploy
+          echo "mlem clem"
+          #mvn clean --batch-mode deploy
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
