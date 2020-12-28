@@ -30,7 +30,7 @@ jobs:
       - name: Test JDBC Driver
         run: |
           mvn package
-          .github/workflows/run_griddb_server.sh && .github/workflows/run_jdbc.sh
+          .github/workflows/run_griddb_server.sh & .github/workflows/run_jdbc.sh
       - name: Publish to the Maven Central Repository
         run: |
           echo "mlem mlem"
