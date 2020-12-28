@@ -26,12 +26,12 @@
         <developer>
             <name>Nguyen Tien Tung Duong</name>
             <email>nguyentientungduong@gmail.com</email>
-            <url />
+            <url/>
             <organization>Toshiba Digital Solutions Corporation</organization>
-            <organizationUrl />
+            <organizationUrl/>
         </developer>
-    </developers
-	
+    </developers>
+
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
