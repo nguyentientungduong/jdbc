@@ -4,7 +4,7 @@
 sudo ufw disable
 
 # Export PATH and run JDBC sample
-export CLASSPATH=${CLASSPATH}:bin/gridstore-jdbc.jar
+export CLASSPATH=${CLASSPATH}:target/
 cp sample/en/jdbc/JDBCSelect.java .
 javac JDBCSelect.java
 java JDBCSelect
