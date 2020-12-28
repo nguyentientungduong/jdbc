@@ -33,6 +33,7 @@ jobs:
           .github/workflows/run_griddb_server.sh
           .github/workflows/run_jdbc.sh
           ls
+          ls target
       - name: Publish to the Maven Central Repository
         run: |
           echo "mlem mlem"
