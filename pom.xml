@@ -1,17 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.nguyentientungduong</groupId>
+	<groupId>com.github.griddb</groupId>
 	<artifactId>gridstore-jdbc</artifactId>
-	<version>4.5.0-SNAPSHOT</version>
+	<version>4.5.0</version>
 	<packaging>jar</packaging>
 	<name>com.github.nguyentientungduong:jdbc</name>
 	<description>JDBC Driver for GridDB V4.5 CE</description>
-	<url>https://github.com/nguyentientungduong/jdbc</url>
+	<url>https://github.com/griddb/jdbc</url>
 
     <scm>
-        <connection>scm:git:https://github.com/nguyentientungduong/jdbc.git</connection>
-        <url>https://github.com/nguyentientungduong/jdbc</url>
+        <connection>scm:git:https://github.com/griddb/jdbc.git</connection>
+        <url>https://github.com/griddb/jdbc</url>
         <tag>HEAD</tag>
     </scm>
 
