@@ -25,13 +25,14 @@ jobs:
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
           gpg-passphrase: ${{ secrets.PASSPHRASE }}
-      - name: Test JDBC Driver
-        run: |
-          . .github/workflows/function.sh
-          run_griddb_server
-          firewall_disable
-          build_jdbc
-          run_sample
+      - name: Create and run GridDB server
+        run: . .github/workflows/function.sh && run_griddb_server
+      - name: Turn off firewall
+        run: . .github/workflows/function.sh && firewall_disable
+      - name: Build package Jdbc Driver
+        run: . .github/workflows/function.sh && build_jdbc
+      - name: Run sample JDBC
+        run: . .github/workflows/function.sh && run_sample
       - name: Publish to the Maven Central Repository
         run: |
           echo "mlem mlem"
