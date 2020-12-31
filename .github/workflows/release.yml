@@ -2,6 +2,10 @@ name: Publish package to the Maven Central Repository and GitHub Packages
 on:
   release:
     types: [created]
+
+env:
+  GRIDDB_SERVER_NAME: "myCluster"
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -22,7 +26,12 @@ jobs:
           server-password: MAVEN_PASSWORD
           gpg-passphrase: ${{ secrets.PASSPHRASE }}
       - name: Test JDBC Driver
-        run: .github/workflows/test_jdbc_driver.sh
+        run: |
+          . .github/workflows/function.sh
+          run_griddb_server
+          firewall_disable
+          build_jdbc
+          run_sample
       - name: Publish to the Maven Central Repository
         run: |
           echo "mlem mlem"
