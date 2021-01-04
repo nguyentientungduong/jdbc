@@ -8,7 +8,7 @@ check_file_exist() {
 }
 
 # Check file
-check_file() {
+check_files() {
     check_file_exist "make_source_for_mvn.sh"
     check_file_exist "pom.xml"
     check_file_exist "sample/en/jdbc/JDBCSelect.java"
@@ -16,7 +16,7 @@ check_file() {
 
 # Build maven jdbc package
 build_jdbc() {
-    check_file
+    check_files
     ./make_source_for_mvn.sh
     mvn package
 }
@@ -44,7 +44,7 @@ get_name() {
 }
 # Export PATH and run JDBC sample
 run_sample() {
-    check_file
+    check_files
     local package_name=$(get_name)
     local jdbc_version=$(get_version)
     export CLASSPATH=${CLASSPATH}:target/$package_name-$jdbc_version.jar
